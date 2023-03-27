@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>malarz</title>
+    <link rel="stylesheet" href="./styl_1.css" />
+  </head>
+  <body>
+    <section class="baner">
+      <h1>Malowanie pokoi i biur</h1>
+    </section>
+    <div class="container">
+      <section class="lewy">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="mieszamy.html">Mieszamy</a></li>
+          <li><a href="cena.html">Wyceniamy</a></li>
+        </ul>
+      </section>
+      <section class="srodkowy">
+        <h2>Zapotrzebowanie na farbę</h2>
+        Powierzchnia malowania (m<sup>2</sup>) <input type="number" name="" id="pow" min="1" />
+        <button id="policz">Policz</button>
+        <p id="ilosc"></p>
+      </section>
+      <section class="prawy">
+        <img src="./obraz.png" alt="Próbki farb”" />
+      </section>
+    </div>
+    <section class="stopka">
+      <h3>MALARZ</h3>
+      <p>Stronę opracowała: 00000000000</p>
+    </section>
+    <!-- JavaScript -->
+    <script>
+      const policz = document.getElementById("policz");
+
+      policz.addEventListener("click", () => {
+        const pow = document.getElementById("pow");
+        const ilosc = document.getElementById("ilosc");
+
+        let puszki = Math.ceil(pow.value / 4);
+
+        ilosc.innerText = "Liczba potrzebnych puszek: " + puszki;
+      });
+    </script>
+  </body>
+</html>

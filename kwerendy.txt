@@ -1,0 +1,13 @@
+Zapytanie 1:
+SELECT cena, pojemnosc FROM farby WHERE kolor='czerwony';
+
+Zapytanie 2:
+SELECT kolor, cena/pojemnosc AS "cena jednostkowa" FROM farby;
+
+Zapytanie 3:
+SELECT farby.kolor, malowanie.liczba_puszek FROM farby JOIN malowanie ON farby.id_farby = malowanie.id_farby WHERE malowanie.id_pomieszczenia=3;
+
+Zapytanie 4:
+CREATE VIEW pomieszczenie1 AS
+SELECT malowanie.id_sciany, malowanie.id_farby FROM malowanie
+WHERE malowanie.id_pomieszczenia = 1;
